@@ -1,132 +1,158 @@
 body {
-    background-color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: #333;
-    height: 800px;
-    margin-top: 100px
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #333;
+  height: 800px;
+  margin-top: 100px
 }
 
 .text {
-    font-size: 1.5rem;
-    color: #333;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 
 * {
-    box-sizing: border-box;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 navbar {
-    font-size: 3rem;
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    margin-top: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+  text-align: center;
 }
 
 #art {
-        width: 22%;
-        height: 38%;
-        border-radius:  0% 43% 37% 63% / 45% 52% 48% 20%;
-        background-color: rgb(253, 83, 83);
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-        z-index: -1;
-        margin-top: -50px;
-        margin-left: -70px;
-        border: 1px solid lightgray;
+      width: 22%;
+      height: 38%;
+      border-radius:  0% 43% 37% 63% / 45% 52% 48% 20%;
+      background-color: rgb(253, 83, 83);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+      z-index: -1;
+      margin-top: -50px;
+      margin-left: -70px;
+      border: 1px solid lightgray;
+      
+}
+
+@media  (max-width: 600px) {
+#art {
+  display: none;
+}
+
+body {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+span{
+  font-size: 2.5rem;
+}
+}
+
+span {
+text-align: center;
+
+}
+
+h2{
+text-align: center;
 }
 
 #art img {
-    margin-top: 70px;
-    margin-left: 100px;
-    width: 150%;
+  margin-top: 70px;
+  margin-left: 100px;
+  width: 150%;
 }
 
 #enter-button {
-    width: 300px;
-    height: 60px;
-    background-color: rgb(253, 83, 83);
-    color: white;
-    font-size: 2rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 100px;
+  width: 300px;
+  height: 60px;
+  background-color: rgb(253, 83, 83);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 100px;
 }
 
 #enter-button:hover {background-color: rgb(253, 83, 83)}
 
 #enter-button:active {
-  background-color: rgb(253, 83, 83);
+background-color: rgb(253, 83, 83);
 }
 
 #enter-button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  #enter-button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  #enter-button:hover span {
-    padding-right: 25px;
-  }
-  
-  #enter-button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#enter-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#enter-button:hover span {
+  padding-right: 25px;
+}
+
+#enter-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 
-  .sketch-highlight{
-    position:relative;
-  }
-  .sketch-highlight:before{
-    content:"";
-    z-index:-1;
-    left:0em;
-    top:0em;
-    border-width:3px;
-    border-style:solid;
-    border-color:rgb(253, 83, 83);
-    position:absolute;
-    border-right-color:transparent;
-    width:100%;
-    height:1em;
-    transform:rotate(2deg);
-    opacity:0.5;
-    border-radius:0.25em;
-  }
-  .sketch-highlight:after{
-    content:"";
-    z-index:-1;
-    left:0em;
-    top:0em;
-    border-width:2.5px;
-    border-style:solid;
-    border-color:rgb(253, 83, 83);
-    border-left-color:transparent;
-    border-top-color:transparent;
-    position:absolute;
-    width:100%;
-    height:1em;
-    transform:rotate(-1deg);
-    opacity:0.5;
-    border-radius:0.25em;
-  }
+.sketch-highlight{
+  position:relative;
+}
+.sketch-highlight:before{
+  content:"";
+  z-index:-1;
+  left:0em;
+  top:0em;
+  border-width:3px;
+  border-style:solid;
+  border-color:rgb(253, 83, 83);
+  position:absolute;
+  border-right-color:transparent;
+  width:100%;
+  height:1em;
+  transform:rotate(2deg);
+  opacity:0.5;
+  border-radius:0.25em;
+}
+.sketch-highlight:after{
+  content:"";
+  z-index:-1;
+  left:0em;
+  top:0em;
+  border-width:2.5px;
+  border-style:solid;
+  border-color:rgb(253, 83, 83);
+  border-left-color:transparent;
+  border-top-color:transparent;
+  position:absolute;
+  width:100%;
+  height:1em;
+  transform:rotate(-1deg);
+  opacity:0.5;
+  border-radius:0.25em;
+}
